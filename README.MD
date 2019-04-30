@@ -1,11 +1,18 @@
-# optiMize Mentor Finder
+# optiPortal: optiMize Community Portal
 
-A tool to search for, find and connect with mentors in the optiMize community.
+A tool to search for, find and connect with members in the optiMize community.
 
 ## Motivation
 
-The motivation for this tool comes from the several key observations:
+The motivation for this tool comes from the several key observations divided up into different use cases:
 
+Alumni Directory:
+* Cases
+
+Team Directory:
+* Provide updates on all teams through the optiMize challenge
+
+Mentorship Directory:
 * Mentorship is a key part of the optiMize Social Innovaton Challenge
 * As the number of students increase, mentorship needs to scale as well
 * Students currently meet a small portion of mentors through mentor check-ins
@@ -17,36 +24,19 @@ The motivation for this tool comes from the several key observations:
 A website where students and mentors can visit to see other mentors, students, fellows and broadly the whole optiMize community. Using a search feature, members of the optiMize community can find other members in this directory. Features like getting information, submitting mentorship requests, etc are possible extensions in the future. Members are able to leverage this platform to enhance one of the greatest parts of the optiMize: the community!
 
 ## Architecure & Tech Stack
+This application is a ReactJS application built on Node.js and run in the client. 
 
-AWS Backend with DynamoDB database.
-GraphQL for defining objects and querying/serving data.
-ReactJS front end and implmentation of off-the-shelf UI.
-File and image storage in AWS S3, with a link to item contained in database record.
+Backend:
+* AWS DynamoDB database
+* AWS AppSync/GraphQL based APIs
+* AWS Lambda for serverless functions
+* AWS Cognito User Pool for authentication
+* AWS S3 for file storage
 
-## Development Pipeline
+Frontend:
+* ReactJS
+* Material-UI
 
-This project may take different turns due to the demand of the product owners and stakeholders. However, this is just a generic outline of what may likely occur.
-
-### Phase 1 - Jan 2019
-
-* Backend database set up on [AWS Cloud](https://docs.aws.amazon.com/appsync/latest/devguide/building-a-client-app-node.html)
-* Basic search functionality (enter a query and return relevant objects)
-* Object definitions for an abstract person prototype
-* User authentication via Higher Order Component and AWS Cognito pool (look into UMich Google log-in)
-
-### Phase 2
-
-* Users can sign in and create profile for themselves
-* Concept of projects and team member association defined
-* Admin control implementation
-
-### Phase 3
-
-* Adoption of alumni and fellows onto platform
-* Split of mentors/cohort/fellows tabs (in terms of display)
-* Past projects section
-
-### Phase 4
-
-* Linking of internal data with external projects/metrics databank
-* Visualization component added
+Hosting & Deployment:
+* Static, client-run application
+* Deployed and hosted on Netlify

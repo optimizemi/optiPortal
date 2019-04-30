@@ -48,5 +48,5 @@ This project may take different turns due to the demand of the product owners an
 
 ### Phase 4
 
-* Linking of internal   ata with external projects/metrics databank
+* Linking of internal data with external projects/metrics databank
 * Visualization component added

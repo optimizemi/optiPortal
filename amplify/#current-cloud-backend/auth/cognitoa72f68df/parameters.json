@@ -1,4 +1,22 @@
 {
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
     "identityPoolName": "cognitoa72f68df_identitypool_a72f68df",
     "allowUnauthenticatedIdentities": false,
     "thirdPartyAuth": false,
@@ -49,9 +67,7 @@
     "userpoolClientSetAttributes": false,
     "useDefault": "default",
     "unAuthRoleName": "optiortal-20190430105737-unauthRole",
-    "authRoleName": "optiortal-20190430105737-authRole",
     "unAuthRoleArn": "arn:aws:iam::726953989740:role/optiortal-20190430105737-unauthRole",
-    "authRoleArn": "arn:aws:iam::726953989740:role/optiortal-20190430105737-authRole",
     "resourceName": "cognitoa72f68df",
     "authSelections": "identityPoolAndUserPool"
 }

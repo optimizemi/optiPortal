@@ -85,7 +85,6 @@ class App extends React.Component {
         </Drawer>
         <main className="content">
           <article className="content-container">
-            <div className="drawerHeader">HEADER</div>
             <img src={logo} className="App-logo" alt="logo" />
             <WelcomePage />
           </article>

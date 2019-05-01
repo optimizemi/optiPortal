@@ -64,18 +64,18 @@ The project directory is defind as such:
 +-- amplify
 +-- node_modules
 +-- public
-    +-- favicon.ico
+|   +-- favicon.ico
 |   +-- index.html
 |   +-- manifest.json
 +-- src
 |   +-- components
 |   +-- img
-    +-- App.css
-    +-- App.js
-    +-- aws-exports.js
-    +-- index.css
-    +-- index.js
-    +-- serviceWorker.js
+|   +-- App.css
+|   +-- App.js
+|   +-- aws-exports.js
+|   +-- index.css
+|   +-- index.js
+|   +-- serviceWorker.js
 +-- .amplifyrc
 +-- .gitattributes
 +-- .gitignore

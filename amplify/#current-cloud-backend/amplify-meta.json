@@ -19,7 +19,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/optiortal-20190430105737-deployment/amplify-cfn-templates/auth/cognitoa72f68df-cloudformation-template.yml",
 				"logicalId": "authcognitoa72f68df"
 			},
-			"lastPushTimeStamp": "2019-04-30T15:14:44.649Z",
+			"lastPushTimeStamp": "2019-05-01T13:52:10.390Z",
 			"output": {
 				"AppClientSecret": "jp292vd8nelbnlbe1qumcu5ti370q47ghs3o6q32qo78n4svsbc",
 				"UserPoolId": "us-east-2_SXFbVVPxB",
@@ -29,7 +29,7 @@
 				"IdentityPoolName": "cognitoa72f68df_identitypool_a72f68df",
 				"UserPoolName": "cognitoa72f68df_userpool_a72f68df"
 			},
-			"lastPushDirHash": "Tp+y8z2bbGTqpWFUZoAE0s8zcG8="
+			"lastPushDirHash": "7mdJPYMgjQnAhzvrHbKEGhgEft4="
 		}
 	}
 }

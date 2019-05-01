@@ -3,6 +3,7 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Icon from "@material-ui/core/Icon";
+import { Auth } from "aws-amplify";
 
 /* This component displays an account menu where users can select a link to
  * view their profile page or log out. It incorporates Auth functions from AWS
@@ -22,6 +23,13 @@ class AccountMenu extends React.Component {
     this.setState({ anchorEl: null });
   };
 
+  // Sign out function
+  handleSignOut = () => {
+    Auth.signOut()
+      .then(data => console.log(data))
+      .catch(err => console.log(err));
+  };
+
   render() {
     const { anchorEl } = this.state;
     return (
@@ -39,8 +47,8 @@ class AccountMenu extends React.Component {
           open={Boolean(anchorEl)}
           onClose={this.handleClose}
         >
-          <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-          <MenuItem onClick={this.handleClose}>Logout</MenuItem>
+          <MenuItem onClick={this.handleClose}>My Profile</MenuItem>
+          <MenuItem onClick={this.handleSignOut}>Logout</MenuItem>
         </Menu>
       </div>
     );

@@ -2,12 +2,11 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import Icon from "@material-ui/core/Icon";
-import { Auth } from "aws-amplify";
+import MenuIcon from "@material-ui/icons/Menu";
+import { Link } from "react-router-dom";
 
-/* This component displays an account menu where users can select a link to
- * view their profile page or log out. It incorporates Auth functions from AWS
- * Amplify library.
+/* This component displays a navigation menu where users can select a link to
+ * view different parts of the portal.
  */
 
 class AccountMenu extends React.Component {
@@ -23,24 +22,17 @@ class AccountMenu extends React.Component {
     this.setState({ anchorEl: null });
   };
 
-  // Sign out function
-  handleSignOut = () => {
-    Auth.signOut()
-      .then(data => console.log(data))
-      .catch(err => console.log(err));
-  };
-
   render() {
     const { anchorEl } = this.state;
     return (
-      <div className="account-menu">
+      <div className="nav-menu">
         <Button
           color="inherit"
           aria-owns={anchorEl ? "account-menu" : undefined}
           aria-haspopup="true"
           onClick={this.handleClick}
         >
-          <Icon>account_circle</Icon>
+          <MenuIcon />
         </Button>
         <Menu
           id="account-menu"
@@ -48,8 +40,18 @@ class AccountMenu extends React.Component {
           open={Boolean(anchorEl)}
           onClose={this.handleClose}
         >
-          <MenuItem onClick={this.handleClose}>My Profile</MenuItem>
-          <MenuItem onClick={this.handleSignOut}>Logout</MenuItem>
+          <Link to="/">
+            <MenuItem>Home</MenuItem>
+          </Link>
+          <Link to="/alumni">
+            <MenuItem>Alumni Directory</MenuItem>
+          </Link>
+          <Link to="/mentors">
+            <MenuItem>Mentor Directory</MenuItem>
+          </Link>
+          <Link to="/resources">
+            <MenuItem>Resources</MenuItem>
+          </Link>
         </Menu>
       </div>
     );

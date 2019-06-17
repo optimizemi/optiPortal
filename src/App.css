@@ -1,5 +1,10 @@
+/* Global app styles */
+html {
+  background: #e1e4ea;
+}
+
 .App {
-  text-align: center;
+  background: #e1e4ea;
 }
 
 .App-logo {
@@ -13,25 +18,30 @@
   margin-right: auto;
 }
 
-.App-header {
+.App-title {
+  margin-right: 1em !important;
+}
+
+.App-toolbar {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.account-menu {
+  position: absolute;
+  right: 1vmin;
+  color: white;
 }
 
-.content-container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+.nav-menu {
+  color: white;
+}
+
+.nav-menu > a > {
+  color: inherit;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {
@@ -41,4 +51,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.content-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }

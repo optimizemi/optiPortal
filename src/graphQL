@@ -1,0 +1,44 @@
+https://hackernoon.com/tackling-user-authorization-in-graphql-with-aws-appsync-7886aef60b4a
+https://medium.com/open-graphql/top-9-aws-appsync-features-you-didnt-know-about-57224075ffb1
+
+
+schema {
+	query:Query
+	mutation: Mutation
+}
+
+type Query { 
+	getMentors: [Personthatismentor]
+	getFellows: [PersonthatisFellow]
+}
+
+type Mutation {
+	addPerson(id: ID!, name: String, description: String, priority: Int): Todo
+}
+
+
+https://medium.com/open-graphql/handling-file-uploads-with-aws-appsync-5d5d23f665a1
+type S3Object {
+  bucket: String
+  key: String
+  region: String
+  url: AWSURL
+  uploadUrl: AWSURL
+}
+
+type User { 
+    id: ID!
+    lastUpdated: AWSTimestamp
+    name: String
+    profilePicture: S3Object
+    userType: String
+	phone: Number
+	type: String
+	skills: [String]
+	channels: [Channel]
+}
+
+type Channel {
+	name: String
+	channelURL: String
+}

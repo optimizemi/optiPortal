@@ -144,6 +144,16 @@
 					"env": "NONE"
 				}
 			}
+		},
+		"hostingS3AndCloudFront": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/optiortal-20190430105737-deployment/amplify-cfn-templates/hosting/template.json",
+				"Parameters": {
+					"bucketName": "optiortal-20190616234227-hostingbucket",
+					"env": "NONE"
+				}
+			}
 		}
 	},
 	"Outputs": {

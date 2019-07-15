@@ -1,0 +1,37 @@
+schema {
+  query:getMentors
+}
+
+type Query{
+  getMentors: [User]
+}
+
+type User {
+  id: ID!
+	name: String!
+	userType: String[]
+	currentRole: String
+	currentEmployer: String
+	schoolGradYear: Number
+	schoolName: String
+	location: String
+  bio: String
+	phone: AWSPhone
+	email: AWSEmail
+	project: Project[]
+	skills: String[]
+	contact: AWSJSON
+}
+
+type Project {
+	id: ID!
+  name: String!
+	description: String
+	year: Number
+	members: User[]
+	mentors: Users[]
+	primaryOwner: User
+	tags: String[]
+	status: String
+	attachments: Documents[]
+}

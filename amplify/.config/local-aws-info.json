@@ -1,0 +1,7 @@
+{
+    "NONE": {
+        "configLevel": "project",
+        "useProfile": true,
+        "profileName": "optimize"
+    }
+}

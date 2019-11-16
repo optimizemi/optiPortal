@@ -1,14 +1,38 @@
 <template>
-  <div class="profile-card">
-    <h1>{{ name }}</h1>
-    <h2>Currently {{ currentRole}} at {{ currentEmployer }}</h2>
-    <p>{{schoolName}} class of {{ schoolGradYear }}</p>
-    <p>{{ bio }}</p>
-    <hr>
-    <h3>Contact Infor</h3>
-    <ul>
-      <li>Social media links</li>
-    </ul>
+  <div>
+    <div class="profile-card card">
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img
+                src="https://bulma.io/images/placeholders/96x96.png"
+                alt="Placeholder image"
+              />
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">{{ mentor.name }}</p>
+            <p class="subtitle is-6">{{ mentor.city }}, {{ mentor.state }}</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <p>{{ mentor.bio }}</p>
+          <p>{{ mentor.skills }}</p>
+          <hr />
+          <h3>Contact Information</h3>
+          <p v-if="mentor.email">
+            Email: <a :href="'mailto:' + mentor.email">{{ mentor.email }} </a>
+          </p>
+          <p v-if="mentor.phone">Phone: {{ mentor.phone }}</p>
+          <p v-if="mentor.linkedin">
+            LinkedIn:
+            <a :href="mentor.linkedin" target="_blank">{{ mentor.linkedin }}</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -16,27 +40,13 @@
 export default {
   name: "ProfileCard",
   props: {
-    name: String,
-    userType: Array,
-    currentRole: String,
-    currentEmployer: String,
-    schoolGradYear: Number,
-    schoolName: String,
-    location: String,
-    bio: String,
-    phone: String,
-    email: String,
-    project: Array,
-    skills: Array
+    mentor: Object
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
 ul {
   list-style-type: none;
   padding: 0;
@@ -45,15 +55,14 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #42b983;
-}
 
 .profile-card {
-  border: solid 1px #333;
-  background: #eee;
-  padding: 1rem;
-  margin: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
   text-align: left;
+}
+
+.profile-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://optiportal.netlify.com">
+      <router-link to="/" class="navbar-item">
         <img src="../assets/logo.png" width="112" />
-      </a>
+      </router-link>
 
       <a
         role="button"
@@ -44,9 +44,13 @@
             <a
               class="navbar-item"
               href="https://docs.google.com/document/d/18XfRsNlunHT1nVqBFkaxDZONdGGwtq4zYNixJieLgMg"
+              target="_blank"
               >Design Docs</a
             >
-            <a class="navbar-item" href="https://forms.gle/uUcQEsBAxhSpsZHFA"
+            <a
+              class="navbar-item"
+              href="https://forms.gle/uUcQEsBAxhSpsZHFA"
+              target="_blank"
               >Bug/Feature Report</a
             >
           </div>
@@ -65,7 +69,6 @@
     </div>
   </nav>
 </template>
-
 
 <script>
 function initializeNavbarBurger() {
@@ -107,5 +110,8 @@ export default {
   background: #333;
   color: #eee;
 }
-</style>
 
+.navbar-link {
+  color: var(--optiMizeBlue) !important;
+}
+</style>

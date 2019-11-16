@@ -12,7 +12,9 @@
     "aws-amplify-vue": "^0.2.11",
     "buefy": "^0.7.7",
     "core-js": "^2.6.5",
+    "node-sass": "^4.12.0",
     "register-service-worker": "^1.6.2",
+    "sass-loader": "^7.1.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"

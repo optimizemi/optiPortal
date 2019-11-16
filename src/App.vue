@@ -1,15 +1,13 @@
 <template>
   <div id="app">
     <NavBar />
-    <amplify-authenticator class="auth">
-      <router-view></router-view>
-    </amplify-authenticator>
+    <!-- <amplify-authenticator class="auth"> -->
+    <router-view class="view"></router-view>
+    <!-- </amplify-authenticator> -->
   </div>
 </template>
 
 <script>
-import { components } from "aws-amplify-vue";
-import { Auth } from "aws-amplify";
 import NavBar from "@/components/NavBar.vue";
 
 export default {
@@ -20,9 +18,9 @@ export default {
 };
 </script>
 
+<style lang="scss">
+@import "./assets/buefy.scss";
 
-
-<style>
 :root {
   /* Colors */
   --amazonOrange: #2db8e5;
@@ -39,6 +37,7 @@ export default {
   --red: #dd3f5b;
   --white: #ffffff;
   --light-blue: #00a1c9;
+  --optiMizeBlue: #2db8e5;
 }
 
 .auth {
@@ -66,5 +65,22 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.view {
+  padding: 20px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+h2 {
+  font-weight: bold;
+  font-size: 26px;
+}
+h3 {
+  font-weight: bold;
+  font-size: 22px;
 }
 </style>

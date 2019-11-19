@@ -57,6 +57,7 @@
         </div>
       </div>
 
+      <!-- DISABLE LOGIN BUTTON --
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
@@ -66,6 +67,7 @@
           </div>
         </div>
       </div>
+      -->
     </div>
   </nav>
 </template>

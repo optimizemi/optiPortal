@@ -19,6 +19,7 @@
 
         <div class="content">
           <p>{{ mentor.bio }}</p>
+          <h3>Focus Areas</h3>
           <p>{{ mentor.skills }}</p>
           <hr />
           <h3>Contact Information</h3>
@@ -27,8 +28,7 @@
           </p>
           <p v-if="mentor.phone">Phone: {{ mentor.phone }}</p>
           <p v-if="mentor.linkedin">
-            LinkedIn:
-            <a :href="mentor.linkedin" target="_blank">{{ mentor.linkedin }}</a>
+            <a :href="mentor.linkedin" target="_blank">LinkedIn profile</a>
           </p>
         </div>
       </div>

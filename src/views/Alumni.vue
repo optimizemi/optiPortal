@@ -1,7 +1,11 @@
 <template>
   <div class="alumni">
     <h1>Alumni</h1>
-    <p>Search, view and browse optiMize alumni using this page. Alumni may include staff, students, and mentors.</p>
+    <p>
+      Search, view and browse optiMize alumni using this page. Alumni may
+      include all members of the optiMize community such as staff, students, and
+      mentors.
+    </p>
 
     <!--  GraphQL query for all users where role/type is alumni.
     Insert form later for updating query based on other factors like year, etc-->

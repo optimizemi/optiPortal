@@ -1,0 +1,9 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "dependencies": {
+    "airtable": "^0.8.1",
+    "express": "^4.17.1",
+    "node": "^13.1.0"
+  }
+}

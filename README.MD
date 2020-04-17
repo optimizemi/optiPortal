@@ -1,5 +1,5 @@
 # opti-portal
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/75c4cc41-2fe8-474e-ac73-7e7ad8db95a2/deploy-status)](https://optiportal.netlify.app)
 ## Build Setup
 
 ```bash

@@ -12,22 +12,25 @@
             </figure>
           </div>
           <div class="media-content">
-            <p class="title is-4">{{ person.name }}</p>
-            <p class="subtitle is-6">{{ person.city }}, {{ person.state }}</p>
+            <p class="title is-4">
+              {{ mentor.firstName }} {{ mentor.lastName }}
+            </p>
+            <p class="subtitle is-6">
+              {{ mentor.currentCity }}, {{ mentor.currentState }}
+            </p>
           </div>
         </div>
 
         <div class="content">
-          <p>{{ person.bio }}</p>
+          <p>{{ mentor.currentPosition }}</p>
           <h3>Focus Areas</h3>
-          <p>{{ person.skills }}</p>
           <hr />
           <h3>Contact Information</h3>
-          <p v-if="person.email">
-            Email: <a :href="'mailto:' + person.email">{{ person.email }} </a>
+          <p v-if="mentor.email">
+            Email: <a :href="'mailto:' + mentor.email">{{ mentor.email }}</a>
           </p>
-          <p v-if="person.phone">Phone: {{ person.phone }}</p>
-          <p v-if="person.linkedin">
+          <p v-if="mentor.phone">Phone: {{ mentor.phone }}</p>
+          <p v-if="mentor.linkedin">
             <a :href="person.linkedin" target="_blank">LinkedIn profile</a>
           </p>
         </div>
@@ -40,21 +43,17 @@
 export default {
   name: 'ProfileCard',
   props: {
-    person: {
+    mentor: {
       type: Object,
       default: () => ({
-        Name: 'Project Title',
-        User_ID: 'hex092',
-        Bio: 'Project description (500 char)',
-        Year: '2099',
-        Primary_Contact: 'Primary Contact Name',
-        Members: ['String Array'],
-        Mentors: ['String Array'],
-        Status: ['String Array'],
-        Category: ['String Array'],
-        Track: ['String Array'],
-        Attachments: ['Document Array'],
-        Link: 'https://#'
+        mentorId: '0',
+        firstName: '',
+        lastName: '',
+        email: 'n/a',
+        phone: 'n/a',
+        currentPosition: 'n/a',
+        currentCity: 'n/a',
+        currentState: 'n/a'
       })
     }
   }

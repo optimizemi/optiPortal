@@ -11,7 +11,7 @@
     <hr />
 
     <div class="cardWrapper">
-      <ProfileCard v-for="mentor in Data" :mentor="mentor" :key="mentor.name" />
+      <ProfileCard v-for="mentor in data" :mentor="mentor" :key="mentor.name" />
     </div>
   </div>
 </template>
@@ -25,14 +25,20 @@ export default {
   components: { ProfileCard },
   data() {
     return {
-      searchText: ''
+      mentors: null,
+      loading: true,
+      errored: false
     }
   },
-  methods: {
-    async fetchMentors() {
-      const mentorsData = await this.$axios.$get(`${process.env.baseurl}`)
-      this.mentorsList = mentorsData
-    }
+  mounted() {
+    this.$axios
+      .get(`https://p5mq2fkwwb.execute-api.us-east-2.amazonaws.com/v1/mentors`)
+      .then((response) => (this.info = response.body))
+      .catch((error) => {
+        console.log(error)
+        this.errored = true
+      })
+      .finally(() => (this.loading = false))
   }
 }
 </script>

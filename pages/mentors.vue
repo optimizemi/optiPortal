@@ -9,7 +9,6 @@
     </p>
     <br />
     <hr />
-
     <div class="cardWrapper">
       <ProfileCard
         v-for="mentor in mentors.body"

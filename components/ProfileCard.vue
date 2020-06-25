@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="profile-card card">
+    <div class="profile-card card rounded overflow-hidden max-w-full">
       <div class="card-content">
         <div class="media">
           <div class="media-left">
@@ -15,9 +15,7 @@
             <p class="title is-4">
               {{ mentor.firstName }} {{ mentor.lastName }}
             </p>
-            <p class="subtitle is-6">
-              {{ mentor.currentCity }}, {{ mentor.currentState }}
-            </p>
+            <p>{{ mentor.currentCity }}, {{ mentor.currentState }}</p>
           </div>
         </div>
 
@@ -68,13 +66,14 @@ ul {
 }
 li {
   display: inline-block;
-  margin: 0 10px;
 }
 
 .profile-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   text-align: left;
+  padding: 20px;
+  margin: 20px 10px 10px 10px;
 }
 
 .profile-card:hover {

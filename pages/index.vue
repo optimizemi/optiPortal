@@ -1,8 +1,10 @@
 <template>
-  <div>
+  <div class="container mx-auto px-4 pt-16">
     <div class="flex m-2">
       <div class="w-1/2 h-12">
-        <h2 class="subtitle">Welcome</h2>
+        <strong>WELCOME</strong>
+        <br />
+        <br />
         <p>
           optiPortal is a tool and directory for the greater optiMize community.
           You can find projects, participants, mentors, organizers, resources
@@ -11,7 +13,9 @@
       </div>
 
       <div class="w-1/2 h-12">
-        <h2 class="subtitle">Announcements</h2>
+        <strong>ANNOUNCEMENTS</strong>
+        <br />
+        <br />
         <p>
           Expect community announcements to be listed here via API push. Maybe
           Slackbot?

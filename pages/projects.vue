@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<!-- todo: add script tags, load mentor picker component --->
+<!-- TO DO: add script tags, load mentor picker component --->
 
 <style>
 .subtitle {

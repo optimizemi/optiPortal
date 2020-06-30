@@ -1,6 +1,8 @@
 <template>
-  <div class="m-2">
-    <h2 class="subtitle">Mentors</h2>
+  <div class="container mx-auto px-4 pt-16">
+    <strong>MENTORS</strong>
+    <br />
+    <br />
     <p>
       On this page you can find active mentors in the optiMize community. These
       mentors have agreed to list their information for the optiMize community
@@ -8,6 +10,20 @@
       bar and filters below to find mentors.
     </p>
     <br />
+    <div class="flex items-center border-b border-b-2  py-2">
+      <input
+        class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+        type="text"
+        placeholder="Search mentor by name"
+        aria-label="Mentor name"
+      />
+      <button
+        class="flex-shrink-0 bg-orange-500 hover:bg-orange-800 border-orange-500 hover:border-orange-800 text-sm border-4 text-white py-1 px-2 rounded"
+        type="button"
+      >
+        Search
+      </button>
+    </div>
     <hr />
     <div class="cardWrapper">
       <ProfileCard

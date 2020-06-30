@@ -1,6 +1,8 @@
 <template>
-  <div class="m-2">
-    <h2 class="subtitle">Projects</h2>
+  <div class="container mx-auto px-4 pt-16">
+    <strong>PROJECTS</strong>
+    <br />
+    <br />
     <p>On this page you can find projects in the optiMize community.</p>
 
     <!-- Build flexbox grid for easy tiling of projects -->

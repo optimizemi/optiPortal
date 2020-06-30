@@ -1,6 +1,8 @@
 <template>
-  <div class="m-2">
-    <h2 class="subtitle">Resources</h2>
+  <div class="container mx-auto px-4 pt-16">
+    <strong>RESOURCES</strong>
+    <br />
+    <br />
     <p>
       On this page you can find resources that may be useful to you, regardless
       of the stage of your project.

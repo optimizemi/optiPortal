@@ -5,21 +5,30 @@
         <strong>WELCOME</strong>
         <br />
         <br />
+        <hr />
+        <br />
         <p>
           optiPortal is a tool and directory for the greater optiMize community.
           You can find projects, participants, mentors, organizers, resources
           and more here.
         </p>
+        <br />
+        <hr />
+        <br />
       </div>
-
       <div class="w-1/2 h-12">
         <strong>ANNOUNCEMENTS</strong>
         <br />
+        <br />
+        <hr />
         <br />
         <p>
           Expect community announcements to be listed here via API push. Maybe
           Slackbot?
         </p>
+        <br />
+        <hr />
+        <br />
         <p>Build ID:</p>
       </div>
     </div>

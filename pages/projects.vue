@@ -3,8 +3,12 @@
     <strong>PROJECTS</strong>
     <br />
     <br />
+    <hr />
+    <br />
     <p>On this page you can find projects in the optiMize community.</p>
-
+    <br />
+    <hr />
+    <br />
     <!-- Build flexbox grid for easy tiling of projects -->
     <ProjectCard />
     <ProjectCard />

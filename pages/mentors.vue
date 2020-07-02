@@ -33,7 +33,7 @@
     <div class="cardWrapper">
       <!--- LOOP over to create cards --->
       <ProfileCard
-        v-for="mentor in mentors.body"
+        v-for="mentor in mentors"
         :key="mentor.mentorId"
         :mentor="mentor"
       />
@@ -44,37 +44,13 @@
 <!-- todo: add script tags, load mentor picker component --->
 <script>
 import ProfileCard from '../components/ProfileCard'
-// import mentorsListData from '../assets/mentorsList.json'
+import mentorsList from '../assets/mentors.json'
 
 export default {
   components: { ProfileCard },
   data() {
     return {
-      mentors: {
-        statusCode: 200,
-        body: [
-          {
-            mentorId: 81,
-            firstName: 'Aaron',
-            lastName: 'Stryker',
-            email: 'astryker@wesleyan.edu',
-            phone: '(734) 834-7604',
-            currentPosition: 'Director',
-            currentCity: 'Ann Arbor',
-            currentState: 'MI'
-          },
-          {
-            mentorId: 117,
-            firstName: 'Aashka',
-            lastName: 'Soni',
-            email: 'aashkahsoni@gmail.com',
-            phone: '(248) 496-7722',
-            currentPosition: 'Partner Development',
-            currentCity: 'Farmington Hills',
-            currentState: 'MI'
-          }
-        ]
-      },
+      mentors: mentorsList,
       loading: true,
       errored: false
     }

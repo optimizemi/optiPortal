@@ -15,13 +15,17 @@
             <strong class="title is-4">
               {{ mentor.firstName }} {{ mentor.lastName }}
             </strong>
-            <p>{{ mentor.currentCity }}, {{ mentor.currentState }}</p>
+            <div v-if="mentor.currentPosition">
+              <em>{{ mentor.currentPosition }}</em>
+            </div>
+            <div v-if="mentor.currentCity">
+              <em>{{ mentor.currentCity }}, {{ mentor.currentState }}</em>
+            </div>
           </div>
         </div>
 
         <div class="content">
-          <p>{{ mentor.currentPosition }}</p>
-          <h3>Contact Information</h3>
+          <strong>Contact Information</strong>
           <p v-if="mentor.email">
             Email: <a :href="'mailto:' + mentor.email">{{ mentor.email }}</a>
           </p>
@@ -29,8 +33,9 @@
           <p v-if="mentor.linkedin">
             <a :href="person.linkedin" target="_blank">LinkedIn profile</a>
           </p>
+          <br />
           <hr />
-          <strong>Skills</strong>
+          <br />
           <ul>
             <li v-for="(skill, index) in mentor.skills" :key="index">
               #{{ skill }} &nbsp;

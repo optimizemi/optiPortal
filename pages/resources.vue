@@ -3,12 +3,15 @@
     <strong>RESOURCES</strong>
     <br />
     <br />
+    <hr />
+    <br />
     <p>
       On this page you can find resources that may be useful to you, regardless
       of the stage of your project.
     </p>
-
+    <br />
     <hr />
+    <br />
 
     <!-- ResourceCard component for each record in resourceList -->
   </div>

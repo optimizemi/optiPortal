@@ -12,28 +12,18 @@
       bar and filters below to find mentors.
     </p>
     <br />
-    <!---
     <div class="flex items-center border-b border-b-2  py-2">
       <input
+        v-model="search"
         class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
         type="text"
         placeholder="Search mentor by name"
-        aria-label="Mentor name"
       />
-      <button 
-        v-on:click="console.log(hello)"
-        class="flex-shrink-0 bg-orange-500 hover:bg-orange-800 border-orange-500 hover:border-orange-800 text-sm border-4 text-white py-1 px-2 rounded"
-        type="button"
-      >
-        Search
-      </button>
     </div>
-    --->
     <hr />
     <div class="cardWrapper">
-      <!--- LOOP over to create cards --->
       <ProfileCard
-        v-for="mentor in mentors"
+        v-for="mentor in filteredMentors"
         :key="mentor.mentorId"
         :mentor="mentor"
       />
@@ -50,10 +40,24 @@ export default {
   components: { ProfileCard },
   data() {
     return {
-      mentors: mentorsList,
-      loading: true,
-      errored: false
+      mentors: [],
+      search: ''
     }
+  },
+  computed: {
+    filteredMentors() {
+      const searchString = this.search.toUpperCase()
+      return this.mentors.filter((mentor) => {
+        const mentorFirstName = mentor.firstName.toUpperCase().concat(' ')
+        const mentorFullName = mentorFirstName.concat(
+          mentor.lastName.toUpperCase()
+        )
+        return mentorFullName.match(searchString)
+      })
+    }
+  },
+  created() {
+    this.mentors = mentorsList
   }
   /*
   mounted() {
